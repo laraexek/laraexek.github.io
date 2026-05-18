@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluciones Web | Diseño para tu Negocio</title>
+    <style>
+        /* CONFIGURACIÓN GENERAL */
+        * {scroll-behavior: smooth;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0f172a; /* Fondo oscuro elegante */
+            color: #f8fafc; /* Texto claro */
+            line-height: 1.6;
+        }
+
+        /* INICIO: Header Principal */
+        header {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6); /* Degradado azul profesional */
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 25px auto;
+            color: #bfdbfe;
+        }
+
+        button {
+            background-color: #10b981; /* Verde éxito para accionar clics */
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #059669; /* Oscurece al pasar el mouse */
+        }
+
+        /* DESARROLLO: Sección de Servicios */
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #3b82f6;
+        }
+
+        .servicios-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap; /* Se adapta a pantallas de teléfonos */
+        }
+
+        .card {
+            background-color: #1e293b; /* Tarjetas de servicio */
+            padding: 30px;
+            border-radius: 8px;
+            flex: 1;
+            min-width: 280px;
+            border: 1px solid #334155;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: #f1f5f9;
+        }
+
+        /* CIERRE: Footer y Formulario */
+        footer {
+            background-color: #020617;
+            padding: 60px 20px 20px 20px;
+            text-align: center;
+            border-top: 1px solid #1e293b;
+        }
+
+        footer h2 {
+            margin-bottom: 15px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 30px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        form input {
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #334155;
+            background-color: #1e293b;
+            color: white;
+        }
+
+        form input:focus {
+            outline: 2px solid #3b82f6;
+        }
+
+        footer p {
+            color: #64748b;
+            font-size: 0.9rem;
+        }/* PORTAFOLIO STYLES */
+        .portfolio-container {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .portfolio-card {
+            background: #1e293b;
+            border: 1px solid #3b82f6; /* Borde azul para resaltar que son proyectos */
+            padding: 25px;
+            border-radius: 12px;
+            flex: 1;
+            min-width: 280px;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Efecto tecnológico al pasar el mouse */
+        .portfolio-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2);
+        }
+
+        .badge {
+            background-color: #3b82f6;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: bold;
+            padding: 4px 10px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .portfolio-card h3 {
+            margin-bottom: 10px;
+            color: #f8fafc;
+        }
+
+        .portfolio-card p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Impulsa tu Negocio con una Página Web Profesional</h1>
+        <p>Diseño sitios web rápidos, modernos y adaptados a teléfonos móviles para que consigas más clientes.</p>
+        <a href="#contacto"><button>Solicitar Presupuesto</button></a>
+    </header>
+
+<section>
+    <h2>Mis Servicios</h2>
+    <div class="servicios-container">
+        <div class="card">
+            <h3>Páginas Web para Comercios</h3>
+            <p>Creación de catálogos digitales y sitios de presentación...</p>
+        </div>
+        <div class="card">
+            <h3>Optimización y Rendimiento</h3>
+            <p>Hago que tu página actual cargue en milisegundos...</p>
+        </div>
+    </div>
+</section>
+<section id="portafolio">
+        <h2>Proyectos Recientes</h2>
+        <div class="portfolio-container">
+            
+            <div class="portfolio-card">
+                <div class="badge">Gastronomía</div>
+                <h3>Restaurante & Cafetería</h3>
+                <p>Menú digital interactivo con código QR para mesas. Carga ultra rápida en teléfonos móviles.</p>
+            </div>
+
+            <div class="portfolio-card">
+                <div class="badge">Comercio</div>
+                <h3>Tienda de Ropa Local</h3>
+                <p>Catálogo web elegante con galería de productos integrada y botón directo para pedidos por WhatsApp.</p>
+            </div>
+
+            <div class="portfolio-card">
+                <div class="badge">Salud</div>
+                <h3>Consultorio Médico</h3>
+                <p>Página de presentación profesional con horarios de atención, mapa de ubicación y reserva de citas.</p>
+            </div>
+
+        </div>
+    </section>
+    <footer>
+        <h2>¿Listo para digitalizar tu empresa?</h2>
+        <p>Escríbeme y diseñemos el plan ideal para tu negocio.</p>
+        <form id="contacto">
+            <input type="text" placeholder="Tu Nombre" required>
+            <input type="email" placeholder="Tu Correo" required>
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+        <br>
+        <p>&copy; 2026 Pedrínn Arell. Todos los derechos reservados.</p>
+    </footer>
+<script>
+        // Seleccionamos el formulario en el código
+        const formulario = document.querySelector('form');
+
+        // Escuchamos cuando el cliente hace clic en "Enviar Mensaje"
+        formulario.addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita que la página se recargue
+
+            // Capturamos los datos que escribió el usuario
+            const nombre = formulario.querySelector('input[type="text"]').value;
+            const correo = formulario.querySelector('input[type="email"]').value;
+
+            // Mostramos un mensaje de éxito elegante en la pantalla
+            alert(`¡Gracias por escribir, ${nombre}! He recibido tu solicitud. Te contactaré pronto a tu correo: ${correo}.`);
+            
+            formulario.reset(); // Limpia los campos para un nuevo cliente
+        });
+    </script>
+</body>
+</html>
