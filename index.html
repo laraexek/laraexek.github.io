@@ -220,31 +220,13 @@
     <footer>
         <h2>¿Listo para digitalizar tu empresa?</h2>
         <p>Escríbeme y diseñemos el plan ideal para tu negocio.</p>
-        <form id="contacto">
-            <input type="text" placeholder="Tu Nombre" required>
-            <input type="email" placeholder="Tu Correo" required>
-            <button type="submit">Enviar Mensaje</button>
+        <form id="contacto" action="https://formspree.io/f/005533332118175710/settings " method="POST">
+        <input type="text" name="nombre" placeholder="Tu Nombre" required>
+        <input type="email" name="correo" placeholder="Tu Correo" required>
+        <button type="submit">Enviar Mensaje</button>
         </form>
         <br>
         <p>&copy; 2026 Pedrínn Arell. Todos los derechos reservados.</p>
     </footer>
-<script>
-        // Seleccionamos el formulario en el código
-        const formulario = document.querySelector('form');
-
-        // Escuchamos cuando el cliente hace clic en "Enviar Mensaje"
-        formulario.addEventListener('submit', function(event) {
-            event.preventDefault(); // Evita que la página se recargue
-
-            // Capturamos los datos que escribió el usuario
-            const nombre = formulario.querySelector('input[type="text"]').value;
-            const correo = formulario.querySelector('input[type="email"]').value;
-
-            // Mostramos un mensaje de éxito elegante en la pantalla
-            alert(`¡Gracias por escribir, ${nombre}! He recibido tu solicitud. Te contactaré pronto a tu correo: ${correo}.`);
-            
-            formulario.reset(); // Limpia los campos para un nuevo cliente
-        });
-    </script>
 </body>
 </html>
