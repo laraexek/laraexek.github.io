@@ -220,13 +220,45 @@
     <footer>
         <h2>¿Listo para digitalizar tu empresa?</h2>
         <p>Escríbeme y diseñemos el plan ideal para tu negocio.</p>
-        <form id="contacto" action="https://formspree.io/f/mpqndjak" method="POST">
+    <form id="contacto">
         <input type="text" name="nombre" placeholder="Tu Nombre" required>
         <input type="email" name="correo" placeholder="Tu Correo" required>
-        <button type="submit">Enviar Mensaje</button>
-        </form>
+        <button type="submit" id="button">Enviar Mensaje</button>
+    </form>
         <br>
         <p>&copy; 2026 Pedrínn Arell. Todos los derechos reservados.</p>
     </footer>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  // Inicializa el motor con tu Llave Pública
+  (function(){
+     emailjs.init("vmSei1AYk_r_FmFzS"); // <-- Borra esto y pega tu Public Key real
+  })();
+
+  const btn = document.getElementById('button');
+
+  document.getElementById('contacto')
+   .addEventListener('submit', function(event) {
+     event.preventDefault(); // Evita que la página se recargue
+
+     btn.innerText = 'Enviando...';
+
+     // Identificadores de tu cuenta
+     const serviceID = 'default_service'; 
+     const templateID = 'template_qhczxne'; // <-- Borra esto y pega tu Template ID real
+
+     // Despacho asíncrono directo al servidor de correo
+     emailjs.sendForm(serviceID, templateID, this)
+      .then(() => {
+        btn.innerText = 'Enviar Mensaje';
+        alert('¡Solicitud enviada con éxito! Revisa tu bandeja de entrada, te hemos enviado nuestra presentación corporativa.');
+        document.getElementById('contacto').reset(); // Limpia las casillas del formulario
+      }, (err) => {
+        btn.innerText = 'Enviar Mensaje';
+        alert('Error en el envío: ' + JSON.stringify(err));
+      });
+  });
+</script>
 </body>
 </html>
