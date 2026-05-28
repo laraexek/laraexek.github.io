@@ -233,23 +233,23 @@
 <script type="text/javascript">
   // Inicializa el motor con tu Llave Pública
   (function(){
-     emailjs.init("vmSei1AYk_r_FmFzS"); // <-- Borra esto y pega tu Public Key real
+     emailjs.init("vmSei1AYk_r_FmFzS");
   })();
 
   const btn = document.getElementById('button');
 
-  document.getElementById('contacto')
-   .addEventListener('submit', function(event) {
-     event.preventDefault(); // Evita que la página se recargue
+  // Escucha el evento de envío del formulario de forma única
+  document.getElementById('contacto').addEventListener('submit', function(event) {
+     event.preventDefault(); // Evita la recarga de la página
 
      btn.innerText = 'Enviando...';
 
-     // Identificadores de tu cuenta
+     // Identificadores de tu cuenta reales y validados
      const serviceID = 'service_fw38Kd'; 
-     const templateID = 'template_qhczxne'; // <-- Borra esto y pega tu Template ID real
+     const templateID = 'template_qhczxne'; 
 
-     // Despacho asíncrono directo al servidor de correo
-     emailjs.sendForm(serviceID, templateID, this)
+     // Despacho asíncrono capturando el formulario exacto del evento
+     emailjs.sendForm(serviceID, templateID, event.target)
       .then(() => {
         btn.innerText = 'Enviar Mensaje';
         alert('¡Solicitud enviada con éxito! Revisa tu bandeja de entrada, te hemos enviado nuestra presentación corporativa.');
